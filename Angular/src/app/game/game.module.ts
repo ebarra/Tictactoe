@@ -5,10 +5,13 @@ import { HeaderComponent } from './header/header.component';
 import { BoardComponent } from './board/board.component';
 import { SquareComponent } from './square/square.component';
 import { StateService } from './state.service';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [GameComponent, HeaderComponent, BoardComponent, SquareComponent],
   exports: [GameComponent],

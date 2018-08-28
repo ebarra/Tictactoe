@@ -3,7 +3,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 export interface State {
     turn: string,
-    values: string[][]
+    values: string[][],
+    player_name: string
 }
 
 @Injectable({
@@ -20,7 +21,8 @@ export class StateService {
         ['-','-','-'],
         ['-','-','-'],
         ['-','-','-']
-      ]
+      ],
+      player_name: '' 
     });
   }
 
@@ -53,7 +55,8 @@ export class StateService {
         ['-','-','-'],
         ['-','-','-'],
         ['-','-','-']
-      ]
+      ],
+      player_name: ''
     };
   }
 

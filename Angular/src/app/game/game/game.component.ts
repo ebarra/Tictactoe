@@ -13,7 +13,16 @@ export class GameComponent implements OnInit {
 
 	private _status: string = 'fetching';
 
+	private _stateService: StateService;
+
+	private _playerName: string;
+
+	_handleSubmitClick() {
+		this._stateService.state.player_name = this._playerName;
+	}
+
   constructor(route: ActivatedRoute, stateService: StateService, myhttpService: MyhttpService) {
+  	this._stateService = stateService;
   	if (route.snapshot.data.continue) {
   		myhttpService.getSavedGame().subscribe((state:State) => {
   			stateService.state = state;
