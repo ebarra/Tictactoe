@@ -1,0 +1,3 @@
+<div *ngFor="let row of _values; index as i">
+	<app-square *ngFor="let col of row; index as j" [row]="i" [column]="j"></app-square>
+</div>

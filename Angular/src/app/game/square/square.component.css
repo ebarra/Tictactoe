@@ -1,0 +1,12 @@
+button {
+	width: 100px;
+	height: 100px;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.no-clickable {
+	cursor: not-allowed;
+}
