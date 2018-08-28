@@ -14,18 +14,14 @@ export class StateService {
 	private _state$: BehaviorSubject<State>;
 
   constructor() { 
-
-	  let initialState = {
-	    turn: 'PLAYERX',
-	    values: [
-	      ['-','-','-'],
-	      ['-','-','-'],
-	      ['-','-','-']
-	    ]
-	  };
-
-	  this._state$ = new BehaviorSubject(initialState);
-
+	  this._state$ = new BehaviorSubject({
+      turn: 'PLAYERX',
+      values: [
+        ['-','-','-'],
+        ['-','-','-'],
+        ['-','-','-']
+      ]
+    });
   }
 
   get state$ (): BehaviorSubject<State> {
@@ -35,6 +31,10 @@ export class StateService {
   get state (): State {
     return this._state$.getValue();
   }
+
+  set state (state: State) {
+    this._state$.next(state);
+  }
   
   updateValue(row, col) {
     if(this.state.values[row][col] === '-') {
@@ -42,8 +42,19 @@ export class StateService {
       let newTurn = this.state.turn === 'PLAYERX' ? 'PLAYER0' : 'PLAYERX';
       this.state.values[row][col] = newValue;
       this.state.turn = newTurn;
-      this._state$.next(this.state);
+      this.state = this.state;
     }
+  }
+
+  reset() {
+    this.state = {
+      turn: 'PLAYERX',
+      values: [
+        ['-','-','-'],
+        ['-','-','-'],
+        ['-','-','-']
+      ]
+    };
   }
 
 }
