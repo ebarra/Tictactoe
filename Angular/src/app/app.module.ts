@@ -9,6 +9,7 @@ import { IndexComponent } from './index/index.component';
 import { GameComponent } from './game/game/game.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     GameModule,
     RouterModule.forRoot(
       appRoutes,
