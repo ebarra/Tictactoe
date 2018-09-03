@@ -1,10 +1,10 @@
 <div *ngIf="_status == 'fetching'">Loading...</div>
 
-<div *ngIf="(_stateService.state$ | async).player_name === ''">
+<form *ngIf="(_stateService.state$ | async).player_name === ''">
 	<label>Introduce Player Name:</label>
-	<input [(ngModel)]="_playerName" >
+	<input [(ngModel)]="_playerName" type="text" name="_playerName">
 	<input (click)="_handleSubmitClick()" type="submit" value="Submit"/>
-</div>
+</form>
 
 <div *ngIf="_status == 'success' && (_stateService.state$ | async).player_name !== ''">
 	<app-header></app-header>
