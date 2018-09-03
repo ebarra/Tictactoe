@@ -1,7 +1,15 @@
 button {
 	width: 100px;
 	height: 100px;
+	background-color: #78bec5;
+  border-radius: 14px;
+  color: #fff;
+  height: 90px;
+  margin: 5px;
+  font-size: 50px;
+	outline:none;
 }
+
 
 .clickable {
 	cursor: pointer;

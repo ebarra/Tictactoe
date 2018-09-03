@@ -1,4 +1,4 @@
-<div *ngIf="_status == 'fetching'">Loading...</div>
+<div *ngIf="_status == 'fetching'" class="loader"></div>
 
 <form *ngIf="(_stateService.state$ | async).player_name === ''">
 	<label>Introduce Player Name:</label>

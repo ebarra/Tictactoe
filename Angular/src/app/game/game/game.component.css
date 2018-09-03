@@ -1,0 +1,47 @@
+form {
+  margin-top: 50px;
+}
+
+form input[type=submit] {
+  background: #0168b3;
+  color: white;
+  border-style: outset;
+  border-color: #0168b3;
+  height: 30px;
+  width: 80px;
+  margin-left: 10px;
+  font: bold 15px arial, sans-serif;
+  text-shadow:none;
+  cursor: pointer;
+}
+
+form input[type=submit]:hover {
+  background-color: #07c;
+  border-color: #005999;
+  box-shadow: inset 0 1px 0 #3af;
+}
+
+form input[type=text] {
+  padding: 8px;
+  font-size: 24px;
+}
+
+form label {
+  color: #0168b3;
+  margin-right: 10px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 50px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

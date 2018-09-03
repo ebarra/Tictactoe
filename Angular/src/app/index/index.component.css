@@ -1,0 +1,16 @@
+.frontbody{
+  margin: 50px auto;
+  height: 298px;
+  background: #676470;
+  color: #fff;
+  font-family: Lato;
+  font-weight: 900;
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 298px;
+  transition: all 0.3s ease;
+}
+
+.frontbody:hover{
+  background: #0168b3;
+}
