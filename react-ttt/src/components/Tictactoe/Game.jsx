@@ -2,9 +2,9 @@ import React from 'react';
 import Header from './Header.jsx';
 import Board from './Board.jsx';
 import { connect } from 'react-redux';
-import { playPosition } from './../reducers/actions';
+import { playPosition } from './../../reducers/actions';
 
-class App extends React.Component {
+class Game extends React.Component {
   constructor(props) {
     super(props);
     this.appClick = this.appClick.bind(this);
@@ -29,4 +29,4 @@ function mapStateToProps(state) {
         turn: state.turn
     };
 }
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(Game);
