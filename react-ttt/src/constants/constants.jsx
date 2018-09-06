@@ -5,3 +5,9 @@ export const VALUES = [
       ['-', '-', '-'],
       ['-', '-', '-'],
 ];
+export const FETCH = {
+  fetching: false,
+  finished: false,
+  error: null
+}
+export const API = "https://api.myjson.com/bins/94am2";

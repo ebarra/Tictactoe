@@ -7,8 +7,8 @@ function gameReducer(state = VALUES, action) {
         let newState = JSON.parse(JSON.stringify(state));
         newState[action.x][action.y] = newValue;
         return newState;
-    case 'RESET':
-        return VALUES;
+    case 'FETCH_STATE_SUCCESS':
+        return action.state.values;
     default:
         return state;
     }

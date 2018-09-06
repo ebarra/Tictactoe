@@ -9,7 +9,7 @@ export default class Main extends React.Component {
           <nav>
             <Route exact path='/' component={Home}/>
             <Route path='/new' component={Game}/>
-            <Route path='/continue' component={Game}/>
+            <Route path='/continue' render={()=> <Game continue={true}/>}/>
           </nav>
         );
     }
