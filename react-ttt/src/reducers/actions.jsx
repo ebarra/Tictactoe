@@ -48,6 +48,13 @@ export function fetchStateFailure(error) {
   };
 }
 
+export function newPlayer(player_name) {
+  return {
+    type: 'NEW_PLAYER',
+    player_name: player_name
+  };
+}
+
 // Handle HTTP errors since fetch won't.
 function handleErrors(response) {
   if (!response.ok) {
