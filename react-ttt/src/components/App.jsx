@@ -16,8 +16,8 @@ class App extends React.Component {
     let text = "Turn of " + this.props.turn;
     return (
       <div>
-        <Header text={text} winner={this.props.winner}/>
-        <Board values={this.props.values}  appClick={this.appClick} winner={this.props.winner}/>
+        <Header text={text} />
+        <Board values={this.props.values}  appClick={this.appClick} />
       </div>
     );
   }
