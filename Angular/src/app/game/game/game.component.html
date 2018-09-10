@@ -1,14 +1,18 @@
 <div *ngIf="_status == 'fetching'">Loading...</div>
 
-<form *ngIf="(_stateService.state$ | async).player_name === ''">
-	<label>Introduce Player Name:</label>
-	<input [(ngModel)]="_playerName" type="text" name="_playerName">
-	<input (click)="_handleSubmitClick()" type="submit" value="Submit"/>
-</form>
+<div *ngIf="_status == 'success'">
 
-<div *ngIf="_status == 'success' && (_stateService.state$ | async).player_name !== ''">
-	<app-header></app-header>
-	<app-board></app-board>
+	<form *ngIf="(_stateService.state$ | async).player_name == ''">
+		<label>Introduce Player Name</label>
+		<input [(ngModel)]="_player_name" type="text" name="_player_name">
+		<input (click)="_handleSubmitClick()" type="submit" value="Submit">
+	</form>
+
+	<div *ngIf="(_stateService.state$ | async).player_name != ''">
+		<app-header></app-header>
+		<app-board></app-board>
+	</div>
+	
 </div>
 
 <h3 *ngIf="_status !== 'success' && _status !== 'fetching'">Error getting state from server. The error was: {{ _status }}</h3>
