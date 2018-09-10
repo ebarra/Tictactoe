@@ -31,7 +31,7 @@ class Game extends React.Component {
   }
   render() {
     if(this.props.fetch.fetching){
-      return <h3>Wait while we fetch the saved game</h3>;
+      return <div className="loader"></div>;
     } else if(this.props.fetch.fetching===false && this.props.fetch.error){
       console.log(this.props.fetch.error);
       return <h3>Error getting state from server. The error was: {this.props.fetch.error.toString()}</h3>;

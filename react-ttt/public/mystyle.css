@@ -90,7 +90,7 @@ form label {
     100% { transform: rotate(360deg); }
 }
 
-.board div button {
+.mybutton {
   background-color: #78bec5;
   border-radius: 14px;
   color: #fff;
