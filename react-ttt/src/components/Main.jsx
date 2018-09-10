@@ -6,11 +6,11 @@ import Home from './Home';
 export default class Main extends React.Component {
     render() {
         return (
-          <nav>
+          <section>
             <Route exact path='/' component={Home}/>
             <Route path='/new' component={Game}/>
             <Route path='/continue' render={()=> <Game continue={true}/>}/>
-          </nav>
+          </section>
         );
     }
 

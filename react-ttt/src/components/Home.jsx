@@ -3,7 +3,7 @@ import React from 'react';
 export default class Home extends React.Component {
     render() {
         return (
-          <div>Hello, this is the frontpage!</div>
+          <div className="frontbody">You can start a new game or continue one already started</div>
         );
     }
 

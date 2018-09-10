@@ -21,7 +21,7 @@ export default class ReduxProvider extends React.Component {
         return (
            <Provider store={ this.store }>
              <ConnectedRouter history={history}>
-               <div style={{ height: '100%' }}>
+               <div style={{ height: '100%', textAlign: 'center' }}>
                  <Header />
                  <Main />
                </div>
