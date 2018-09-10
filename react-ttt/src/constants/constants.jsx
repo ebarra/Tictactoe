@@ -10,4 +10,4 @@ export const FETCH = {
   finished: false,
   error: null
 }
-export const API = "https://api.myjson.com/bins/94am2";
+export const API = "https://api.myjson.com/bins/i216a";
