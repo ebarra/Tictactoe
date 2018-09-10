@@ -35,6 +35,10 @@ export class StateService {
   get state (): State {
     return this._state$.getValue();
   }
+
+  set state (state: State) {
+    this._state$.next(state);
+  }
   
   updateValue(row, col) {
     if(this.state.values[row][col] === '-') {
@@ -44,6 +48,18 @@ export class StateService {
       this.state.turn = newTurn;
       this._state$.next(this.state);
     }
+  }
+
+  
+  reset() {
+    this.state = {
+      turn: 'PLAYERX',
+      values: [
+        ['-','-','-'],
+        ['-','-','-'],
+        ['-','-','-']
+      ]
+    };
   }
 
 }
