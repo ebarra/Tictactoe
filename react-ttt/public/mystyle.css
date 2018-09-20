@@ -99,3 +99,11 @@ form label {
   font-size: 50px;
   outline:none;
 }
+
+.clickable {
+	cursor: pointer;
+}
+
+.no_clickable {
+	cursor: not-allowed;
+}
