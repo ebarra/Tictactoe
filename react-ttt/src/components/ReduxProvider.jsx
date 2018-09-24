@@ -9,7 +9,7 @@ export default class ReduxProvider extends React.Component {
     constructor(props) {
         super(props);
         this.initialState = {values: VALUES, turn: PLAYERX};
-        this.store = this.configureStore();
+        this.store = createStore(GlobalState, this.initialState);
     }
     render() {
         return (
@@ -19,15 +19,5 @@ export default class ReduxProvider extends React.Component {
             </div>
           </Provider>
         );
-    }
-    configureStore() {
-        const store = createStore(GlobalState, this.initialState);
-        if (module.hot) {
-            module.hot.accept('./../reducers/reducers', () => {
-                const nextRootReducer = require('./../reducers/reducers').default;
-                store.replaceReducer(nextRootReducer);
-            });
-        }
-        return store;
     }
 }
